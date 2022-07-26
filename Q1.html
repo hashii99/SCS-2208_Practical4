@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_01</title>
+
+    <style>
+    body {
+        font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    align-self: center;
+    padding: 40px;
+    background-color:lightgoldenrodyellow;
+    width: 500px;
+    border:5px solid gray;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+
+}
+input[type=text] {
+    width:70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+}
+input[type=text] {
+    background-color: #ddd;
+    outline: none;
+}
+.ClickButton {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 55%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+.ClickButton:hover{
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+        <label for="name">Name : </label><br>
+        <input type="text" placeholder="Insert a name.." name="name" id="name" required><br>
+
+        <label for="hometown">Hometown : </label> <br>
+        <input type="text" placeholder="Insert home town.." name="hometown" id="hometown" required><br>
+
+        <button type ="submit" class="ClickButton" onclick="myFunction()">Click</button>
+        </div>
+    </form> 
+</body>
+
+<script>
+    function myFunction() {
+    let name = document.getElementById("name").value;
+    let hometown = document.getElementById("hometown").value;
+
+    alert("Name : "+name+"\n"+"Hometown : "+hometown);
+}   
+</script>
+
+</html>

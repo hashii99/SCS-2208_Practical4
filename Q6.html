@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_6</title>
+    <style>
+        body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    padding: 40px;
+    background-color: lightgoldenrodyellow;
+    width: 500px;
+    border: 5px solid gray;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+    align-self: center;
+}
+
+.ClickButton {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 55%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+.ClickButton:hover {
+    opacity: 1;
+}
+
+input[type=number]{
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+    outline:none;   
+}
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+        <label for="name">Insert the number : </label><br>
+        <input type="number"  name="number" id="number"><br>
+
+        <button type ="submit" class="ClickButton" onclick="Q6Function()">Find the root</button>
+        </div>
+    </form>
+</body>
+
+<script>
+    function Q6Function() {
+    let number = document.getElementById("number").value;
+    alert(Math.sqrt(number));
+}
+</script>
+</html>

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="Q8.css"> -->
+    <title>Question_8</title>
+
+    <style>
+        body{
+        font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    padding: 40px;
+    background-color:darkgrey;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+    align-self: center;
+    border:double;
+}
+
+input[type=number] {
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+}
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <label for="amount">Insert the amount : </label><br>
+            <input type="number"  name="number" id="number" onmouseout="total()"><br>
+            <p id="sum"></p>
+            </div>
+    </form>
+
+    <!-- <script src="Q8.js"></script> -->
+</body>
+
+<script>
+    function total(){
+        var Amount = Number(document.getElementById("number").value);
+        var val = Amount * 0.2;
+        var total = Amount + val;
+
+        document.getElementById("sum").innerHTML = ("20% of value: "+val+"  Total : "+Amount+"+"+val+"="+total);
+    }
+</script>
+
+</html>

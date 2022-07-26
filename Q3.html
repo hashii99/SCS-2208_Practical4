@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="Q3_styles.css"> -->
+    <title>Question_3</title>
+    <style>
+        body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    padding: 40px;
+    background-color: lightgoldenrodyellow;
+    width: 500px;
+    border: 5px solid gray;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+    align-self: center;
+}
+
+button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 55%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+button {
+    opacity: 1;
+}
+
+input[type=text],[type=date] {
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+    outline:none; 
+}
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+        <label for="name">Name : </label><br>
+        <input type="text" placeholder="Insert a name.." name="name" id="name"><br>
+
+        <label for="birthday">BirthDay : </label> <br>
+        <input type="date" placeholder="Insert birthday.." name="birthday" id="birthday"><br>
+
+        <button onclick="Q3Function()">Click</button>
+        </div>
+    </form>
+</body>
+
+<script>
+    function Q3Function() {
+    
+    var user = document.getElementById("birthday").value;
+    var dob = new Date(user);
+    var month_diff = Date.now()-dob.getTime();
+    var age_dt = new Date(month_diff);
+    var year = age_dt.getUTCFullYear();
+    var age =Math.abs(year-1970);
+
+    alert("Age = "+age);
+}
+</script>
+</html>

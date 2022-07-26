@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_07</title>
+    <style>
+        body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    padding: 30px;
+    background-color:azure;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+    align-self: center;
+    border: solid black;
+}
+
+button {
+    background-color:dimgray;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+button {
+    opacity: 1;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Available Hotel Package</h3>
+        <form>
+            <input type="checkbox" id="package1" name="package1" value="package1" class="checkbox">
+            <label for="package1">Wedding Package</label> <br>
+
+            <input type="checkbox" id="package2" name="package2" value="package2" class="checkbox">
+            <label for="package2">Birthday Package</label> <br>
+
+            <input type="checkbox" id="package3" name="package3" value="package3" class="checkbox">
+            <label for="package3">Normal Function Package</label> <br>
+
+            <input type="checkbox" id="package4" name="package4" value="package4" class="checkbox">
+            <label for="package4">Day out Package</label> <br>
+
+        </form>
+
+        <button type="submit" onclick="myFunction()">Submit</button>
+        <p id="myCheck"></p>
+    </div>
+</body>
+
+<script>  
+var chbx = document.getElementsByTagName("input");
+for(let i=0; i<chbx.length; i++){
+    chbx[i].addEventListener("change",e=>{
+        if(e.target.checked){
+            chbx[i].checked = true
+            for(let j=0; j<chbx.length; j++){
+                if(j!=i){
+                    chbx[j].disabled = true;
+                }
+            }
+        }else{
+            for(let j=0; j<chbx.length; j++){
+                    chbx[j].disabled = false;
+            }
+        }
+    })
+}
+</script>
+</html>

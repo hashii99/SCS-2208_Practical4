@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question_09</title>
+    <style>
+        body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.container {
+    align-self: center;
+    padding: 40px;
+    background-color:lightgoldenrodyellow;
+    width: 500px;
+    border:5px solid gray;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: left;
+
+}
+input[type=text],[type=number] {
+    width:70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color:fuchsia;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 500px;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+button{
+    opacity: 1;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <from>
+        <label for="subject">Subject : </label>
+        <input type="text" name="subject" id="subject" ><br>
+
+        <label for="marks">Marks : </label> 
+        <input type="number" name="marks" id="marks"><br>
+        </form>
+
+        <button onclick="Q9Function()">Results</button>
+        <p id="answer"></p>
+    </div>    
+</body>
+
+<script>
+    function Q9Function() {
+    var subject = document.getElementById("subject").value;
+    var marks = document.getElementById("marks").value;
+
+    if (marks < 50 ) {
+        document.getElementById("answer").innerHTML="Sorry! You have to work hard for "+subject+ " subject";
+    }
+    else {
+        document.getElementById("answer").innerHTML="Great! You passed "+subject+ " subject";
+    }
+}
+</script>
+</html>
